@@ -1,1 +1,45 @@
-
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+ }
+ 
+ body {
+     background: url(WKRv3.jpg);
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }
+ 
+ .nawigacja {
+     border: 1px solid red;
+     position: absolute;
+     right: 0px;
+     top: 0px;
+ }
+ 
+ .lewy {
+     border: 1px solid red;
+     position: fixed;
+     width: 40%;
+     height: inherit;
+ }
+ 
+ .prawygora {
+     border: 1px solid red;
+     position: fixed;
+     right: 0px;
+     width: 60%;
+     height: 50%;
+ }
+ 
+ .prawydol {
+     border: 1px solid red;
+     position: fixed;
+     bottom: 0px;
+     right: 0px;
+     width: 60%;
+     height: 50%;
+ }
