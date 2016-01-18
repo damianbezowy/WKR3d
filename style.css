@@ -1,63 +1,134 @@
- html,
- body {
-     width: 100%;
-     height: 100%;
-     overflow: hidden;
- }
- 
- body {
-     background: url(WKRv3.jpg);
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
- }
- 
- .nawigacja {
-     border: 1px solid red;
-     position: absolute;
-     right: 0px;
-     top: 0px;
- }
- 
- .lewy {
-     background-color: rgb(235,235,235);
-     border: 1px solid red;
-     position: fixed;
-     width: 40%;
-     height: inherit;
-     
- }
- 
+@font-face {
+    font-family: 'Aktiv';
+    src: url("assets/font/AktivGrotesk.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url("assets/font/AktivGroteskItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url("assets/font/AktivGroteskBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url("assets/font/AktivGroteskBoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'Aktiv Light';
+    src: url("assets/font/AktivGroteskLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Aktiv';
+    src: url("assets/font/AktivGroteskLightItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'Clan';
+    src: url("assets/font/ClanPro-NarrBold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Clan';
+    src: url("assets/font/ClanPro-NarrUltra.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Clan';
+    src: url("assets/font/ClanPro-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Clan';
+    src: url("assets/font/ClanPro-News.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url(WKRv3.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.nawigacja {
+    border: 1px solid red;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.lewy {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid red;
+    position: fixed;
+    width: 40%;
+    height: inherit;
+}
+
 #logo {
-	position:absolute;
+    position: absolute;
     top: 10px;
-    left:10px;
-    
+    left: 10px;
 }
 
-#kontaktbutton {
-	position: absolute;
+.kontaktbutton {
+    position: absolute;
     bottom: 10px;
-    left:10px;
+    left: 10px;
+    background: none;
+    font: bold 12px Aktiv;
 }
 
-#kontaktbutton a:hover{
-	background: rgba(255,255,255,1);
+#kontaktbutton a:hover {
+    background: rgba(255, 255, 255, 1);
 }
- .prawygora {
-     border: 1px solid red;
-     position: fixed;
-     right: 0px;
-     width: 60%;
-     height: 50%;
- }
- 
- .prawydol {
-     border: 1px solid red;
-     position: fixed;
-     bottom: 0px;
-     right: 0px;
-     width: 60%;
-     height: 50%;
- }
+
+.prawygora {
+    border: 1px solid red;
+    position: fixed;
+    right: 0px;
+    width: 60%;
+    height: 50%;
+}
+
+.prawydol {
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 60%;
+    height: 50%;
+}
