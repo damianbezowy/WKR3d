@@ -84,15 +84,26 @@ body {
 }
 
 .nawigacja {
-    border: 1px solid red;
+    
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 30px;
+    top: 30px;
+}
+
+.nawigacjali{
+list-style-type: none;
+    font: normal 14px Aktiv;
+
+}
+
+.nawigacjali li{
+	display: inline;
+    padding-right: 15px;
 }
 
 .lewy {
     background-color: rgb(235, 235, 235);
-    border: 1px solid red;
+    
     position: fixed;
     width: 40%;
     height: inherit;
@@ -110,6 +121,8 @@ body {
     left: 10px;
     background: none;
     font: bold 12px Aktiv;
+    padding-left: 25px;
+    padding-right:25px;
 }
 
 #kontaktbutton a:hover {
