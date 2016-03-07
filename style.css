@@ -82,21 +82,31 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+a {
+color:black;
+}
+
+a:hover{
+text-decoration: none;
+}
+
 
 .nawigacja {
     
     position: absolute;
     right: 30px;
     top: 30px;
+    z-index: 100;
 }
 
-.nawigacjali{
+.nawigacjalista{
+    
 list-style-type: none;
     font: normal 14px Aktiv;
 
 }
 
-.nawigacjali li{
+.nawigacjalista li{
 	display: inline;
     padding-right: 15px;
 }
@@ -125,8 +135,27 @@ list-style-type: none;
     padding-right:25px;
 }
 
+
+
 #kontaktbutton a:hover {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.next-section {
+    
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    display: block;
+ 
+    
+}
+section {
+   
+    height:320px;
+ 
+    border:2px solid #555;
+    background-color:#F0F0F0;
 }
 
 .prawygora {
@@ -135,6 +164,7 @@ list-style-type: none;
     right: 0px;
     width: 60%;
     height: 50%;
+    overflow:scroll;
 }
 
 .prawydol {
@@ -144,4 +174,5 @@ list-style-type: none;
     right: 0px;
     width: 60%;
     height: 50%;
+    overflow:scroll;
 }
