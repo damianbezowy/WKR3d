@@ -76,44 +76,65 @@ body {
 }
 
 body {
-    background: url(WKRv3.jpg);
+  
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 a {
-color:black;
+    color: black;
 }
 
-a:hover{
-text-decoration: none;
+a:hover {
+    text-decoration: none;
 }
 
+h1 {
+    font: bold 28px Clan;
+}
 
+p {
+    font: normal 12px Aktiv;
+}
+
+#oklastrze h1,
+p {
+    text-align: center;
+}
+
+.tytulposta {
+    width: 50%;
+    margin: auto;
+    margin-top: 12%;
+}
+#oklastrze2 {
+	background-image: url("assets/bgoklastrze.jpg") ;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .nawigacja {
-    
     position: absolute;
     right: 30px;
     top: 30px;
     z-index: 100;
 }
 
-.nawigacjalista{
-    
-list-style-type: none;
+.nawigacjalista {
+    list-style-type: none;
     font: normal 14px Aktiv;
-
 }
 
-.nawigacjalista li{
-	display: inline;
+.nawigacjalista li {
+    display: inline;
     padding-right: 15px;
 }
 
 .lewy {
     background-color: rgb(235, 235, 235);
-    
     position: fixed;
     width: 40%;
     height: inherit;
@@ -124,6 +145,11 @@ list-style-type: none;
     top: 10px;
     left: 10px;
 }
+.oklastrzebutton{
+    position: relative;
+    left:72%;
+    top:50%;
+}
 
 .kontaktbutton {
     position: absolute;
@@ -132,47 +158,42 @@ list-style-type: none;
     background: none;
     font: bold 12px Aktiv;
     padding-left: 25px;
-    padding-right:25px;
+    padding-right: 25px;
 }
-
-
 
 #kontaktbutton a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
 .next-section {
-    
     position: absolute;
-    bottom: 100px;
+    bottom: 10px;
     left: 50%;
     display: block;
- 
-    
-}
-section {
-   
-    height:320px;
- 
-    border:2px solid #555;
-    background-color:#F0F0F0;
 }
 
+section {
+    height: 100%;
+   // border: 2px solid #555;
+}
+.section-content {
+	height: 100%;
+}
 .prawygora {
-    border: 1px solid red;
+   // border: 1px solid red;
     position: fixed;
     right: 0px;
     width: 60%;
     height: 50%;
-    overflow:scroll;
+    overflow: scroll;
 }
 
 .prawydol {
-    border: 1px solid red;
+    //border: 1px solid red;
     position: fixed;
     bottom: 0px;
     right: 0px;
     width: 60%;
     height: 50%;
-    overflow:scroll;
+    overflow: scroll;
 }
