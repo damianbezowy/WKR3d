@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wielkopolski Klaster Rzeczny</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+    
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    
+
+</head>
+
+<body>
+
+    <div class="nawigacja">
+        <ul class="nawigacjalista">
+            <li><a href="#oklastrze">O Klastrze</a></li>
+            <li><a href="#aktualnosci">Aktualności</a></li>
+            <li><a href="#inwestycje">Inwestycje</a></li>
+            <li><a href="#czlonkowie">Członkowie</a></li>
+            <li><a href="#biuro">Biuro Prasowe</a></li>
+        </ul>
+    </div>
+    <div class="lewy">
+        <a href="index.html"> <img id="logo" src="assets/logo.png" alt="" /></a>
+
+    </div>
+
+    <div class="prawygora">
+        <section id="oklastrze">
+            <a href="#" class="next-section"><img id="logo" src="assets/wdolbutton.png" alt="" /></a>
+            <div class="section-content">
+                oklastrze
+            </div>
+        </section>
+
+        <section id="aktualnosci">
+
+            <div class="section-content">
+                aktualnosci
+            </div>
+        </section>
+
+        <section id="inwestycje">
+
+            <div class="section-content">
+                inwestycje
+            </div>
+        </section>
+
+        <section id="czlonkowie">
+            <div class="section-content">
+                czlonkowie
+            </div>
+        </section>
+
+
+    </div>
+
+    <div class="prawydol">
+
+        <section id="oklastrze2">
+            <div class="section-content">
+                oklastrze2
+            </div>
+        </section>
+
+        <section id="aktualnosci2">
+
+            <div class="section-content">
+                aktualnosci2
+            </div>
+        </section>
+
+        <section id="inwestycje2">
+
+            <div class="section-content">
+                inwestycje2
+            </div>
+        </section>
+
+        <section id="czlonkowie2">
+            <div class="section-content">
+                czlonkowie2
+            </div>
+        </section>
+
+
+    </div>
+
+    <a href="kontakt.html" class="btn btn-default btn-lg kontaktbutton"> Kontakt </a>
+    
+    <script>
+        jQuery.fn.extend({
+            scrollTo: function (speed, easing) {
+                return this.each(function () {
+                    var targetOffset = $(this).offset().top;
+                    $('html,body').animate({
+                        scrollTop: targetOffset
+                    }, speed, easing);
+                });
+            }
+        });
+
+        $('.next-section').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                $next = $this.parent().next();
+
+            $next.scrollTo(400, 'linear');
+        });
+
+        $('.prev-section').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                $prev = $this.parent().prev();
+
+            $prev.scrollTo(400, 'linear');
+        });
+    </script>
+</body>
+
+</html>
