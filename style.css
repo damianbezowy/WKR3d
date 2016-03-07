@@ -73,14 +73,11 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    
 }
 
 body {
-  
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 a {
@@ -130,6 +127,36 @@ margin-top:100px;
     margin: auto;
     margin-top: 5%;
 }
+.main {
+    
+    width: 90%;
+    margin: auto;
+    margin-top: 10%;
+    
+}
+.main h1{
+text-align: center;
+}
+.kontakt{
+    
+   
+    padding-top: 12%;
+
+width: 70%;
+    margin: auto;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    height: 600px;
+}
+.kontakt p{
+    font: normal 10px Aktiv;
+text-align: left;
+}
+.kontakt h2{
+    font: normal 14px Aktiv;
+font: normal 12px Aktiv;
+    }
 #aktualnosci h1, p{
 	 text-align: center;
 }
@@ -219,6 +246,11 @@ margin-top:100px;
     
     left:42%;
 }
+.linianadtekst2 {
+	position:relative;
+    
+    left:45%;
+}
 .oklastrzebutton{
     position: relative;
     left:72%;
@@ -239,13 +271,20 @@ margin-top:100px;
     font: bold 12px Aktiv;
     padding-left: 25px;
     padding-right: 25px;
+    
+}
+.stopka {
+    font: normal 10px Aktiv;
+    
+   position: fixed; bottom: 10px; right: 10px;
+    
 }
 
 #kontaktbutton a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.next-section {
+.display {
     position: absolute;
     bottom: 10px;
     left: 50%;

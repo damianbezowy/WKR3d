@@ -33,7 +33,7 @@
                 smoothScroll(document.getElementById('inwestycje'))">Inwestycje</a></li>
             <li><a href="#" onclick="smoothScroll(document.getElementById('czlonkowie2'))
                 smoothScroll(document.getElementById('czlonkowie'))">Członkowie</a></li>
-            <li><a href="kontakt.html">Biuro Prasowe</a></li>
+            <li><a href="biuro.html">Biuro Prasowe</a></li>
         </ul>
     </div>
     <div class="lewy">
@@ -42,7 +42,8 @@
     </div>
 
     <div class="prawygora">
-        <section id="oklastrze">
+        <!--<div><a href="#" id="display" class="display">next</a></div>-->
+        <section id="oklastrze" class="section current">
             
             <div class="tytulposta">
                 
@@ -56,7 +57,7 @@
             </div>
         </section>
 
-        <section id="aktualnosci">
+        <section id="aktualnosci" class="section">
 
             <div class="tytulposta">
                 <p id="data">
@@ -75,7 +76,7 @@ Zgłoszenia na konkurs fotograficzny należ przesyłać do końca lipca, na film
             <a href="aktualnosci.html" class="aktualnoscibutton"><img src="assets/wiecejblack.png" alt="" /></a>
         </section>
 
-        <section id="inwestycje">
+        <section id="inwestycje" class="section">
 
             <div class="tytulposta">
                <p id="data">
@@ -91,7 +92,7 @@ Zgłoszenia na konkurs fotograficzny należ przesyłać do końca lipca, na film
             </div>
         </section>
 
-        <section id="czlonkowie">
+        <section id="czlonkowie" class="section">
             <div class="tytulposta">
                
                
@@ -110,13 +111,13 @@ Wielkopolska
 
     <div class="prawydol">
 
-        <section id="oklastrze2">
+        <section id="oklastrze2"class="section current">
             <div class="section-content">
                 <a href="oklastrze.html" class="oklastrzebutton"><img src="assets/wiecej.png" alt="" /></a>
             </div>
         </section>
 
-        <section id="aktualnosci2">
+        <section id="aktualnosci2"class="section">
 
             <div class="section-content">
                  <div class="tytulposta">
@@ -135,7 +136,7 @@ Wielkopolska
             <a href="aktualnosci2.html" class="aktualnoscibutton"><img src="assets/wiecejwhite.png" alt="" /></a>
         </section>
 
-        <section id="inwestycje2">
+        <section id="inwestycje2"class="section">
 
             <div class="tytulposta">
                  <p id="datawhite">
@@ -153,7 +154,7 @@ Wielkopolska
         <a href="inwestycje.html" class="aktualnoscibutton"><img src="assets/wiecejwhite.png" alt="" /></a>
         </section>
 
-        <section id="czlonkowie2">
+        <section id="czlonkowie2"class="section">
             <div class="section-content">
                 <a href="czlonkowie.html" class="oklastrzebutton"><img src="assets/dolacz.png" alt="" /></a>
             </div>
@@ -162,35 +163,46 @@ Wielkopolska
 
     </div>
 
-    <a href="kontakt.html" class="btn btn-default btn-lg kontaktbutton"> Kontakt </a>
-    <a href="#" class="next-section"><img style="width:80%;" src="assets/wdolbutton.png" alt="" /></a>
+    <a href="kontakt.html"  class="btn btn-default btn-lg kontaktbutton"> Kontakt </a>
+   
+
     <script>
-        jQuery.fn.extend({
-            scrollTo: function (speed, easing) {
-                return this.each(function () {
-                    var targetOffset = $(this).offset().top;
-                    $('html,body').animate({
-                        scrollTop: targetOffset
-                    }, speed, easing);
-                });
-            }
+  $('.section').first();
+
+$('a.display').on('click', function(e) {
+    e.preventDefault();
+
+      var t = $(this).text(),
+      that = $(this);
+
+    if (t === 'next' && $('.current').next('.section').length > 0) {
+        var $next = $('.current').next('.section');
+        var top = $next.offset().top;
+        
+        $('.current').removeClass('current');     
+        $(function () {
+               $next.addClass('current');
+               $('html, body').animate({scrollTop: $('.current').offset().top }, 'slow');
+            
         });
-
-        $('.next-section').click(function (e) {
-            e.preventDefault();
-            var $this = $(this),
-                $next = $this.parent().next();
-
-            $next.scrollTo(400, 'linear');
+  } else if (t === 'prevs' && $('.current').prev('.section').length > 0) {
+        var $prev = $('.current').prev('.section');
+        var top = $prev.offset().top;
+        
+        $('.current').removeClass('current');
+      
+        $(function () {
+               $prev.addClass('current');
+               $('html, body').animate({scrollTop: $('.current').offset().top }, 'slow');
         });
+  } 
+});
 
-        $('.prev-section').click(function (e) {
-            e.preventDefault();
-            var $this = $(this),
-                $prev = $this.parent().prev();
 
-            $prev.scrollTo(400, 'linear');
-        });
+
+
+
+
     </script>
 <script>
 window.smoothScroll = function(target) {
